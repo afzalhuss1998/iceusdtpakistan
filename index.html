@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ICE USDT — Pakistan’s Gaming Hub</title>
+  <meta name="description" content="Play 500+ games with smooth USDT deposits and fast withdrawals. Register yourself or get an ID via WhatsApp. Available worldwide." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --bg:#0b0f19; --card:#111626; --muted:#9aa4bf; --text:#e6ecff; --accent:#4ad1ff; --accent2:#7cf7d4; --danger:#ff6666;
+      --shadow:0 10px 25px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.03);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:radial-gradient(1200px 600px at 90% -10%, rgba(74,209,255,.12), transparent 60%),linear-gradient(180deg, #0b0f19 0%, #0a0d16 100%);color:var(--text);font:16px/1.6 "Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    a{color:var(--accent);text-decoration:none}
+    .container{max-width:1150px;margin:0 auto;padding:28px}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(124,247,212,.1);color:#bff7e7;border:1px solid rgba(124,247,212,.25)}
+    header{position:sticky;top:0;backdrop-filter:saturate(180%) blur(10px);background:rgba(11,15,25,.65);border-bottom:1px solid rgba(255,255,255,.06);z-index:50}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.4px}
+    .logo img{height:56px;width:auto;display:block}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(180deg,#1a2138,#12182a);color:var(--text);box-shadow:var(--shadow);cursor:pointer;transition:.25s}
+    .btn:hover{transform:translateY(-1px);border-color:rgba(255,255,255,.2)}
+    .btn.primary{background:linear-gradient(180deg, #4ad1ff, #34a9d1);color:#001018;border:none;box-shadow:0 8px 25px rgba(74,209,255,.35)}
+    .btn.whatsapp{background:#25D366;color:#041e10;border:none}
+    .lang-switch{display:flex;gap:8px;align-items:center}
+    .lang-switch .btn.active{background:linear-gradient(180deg, #4ad1ff, #34a9d1);color:#001018;border:none}
+    .grid{display:grid;gap:20px}
+    .hero{padding:64px 0 36px;display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}
+    .hero-card{background:linear-gradient(180deg,#12182a,#0f1526);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px}
+    .hero h1{font-size:42px;line-height:1.1;margin:10px 0 14px;letter-spacing:.2px}
+    .hero p{color:var(--muted);margin:0 0 22px}
+    .kpis{display:flex;gap:14px;flex-wrap:wrap}
+    .kpis .kpi{flex:1 1 130px;padding:14px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);text-align:center}
+    .kpi .big{font-size:22px;font-weight:800}
+    .tagline{display:inline-flex;gap:8px;align-items:center;color:#b9c6ff}
+    .glow{position:absolute;inset:-20px;-webkit-mask:radial-gradient(400px 180px at 30% 0,#000 30%,transparent 65%);pointer-events:none;opacity:.65}
+    .section{padding:36px 0}
+    .card{background:linear-gradient(180deg,#12182a,#0f1526);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px}
+    .features{grid-template-columns:repeat(3,1fr)}
+    .step{display:flex;gap:14px}
+    .step .num{flex:0 0 36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;color:#01222d;font-weight:800}
+    .list{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+    .list li{display:flex;align-items:flex-start;gap:10px}
+    .list li i{width:18px;height:18px;border-radius:5px;background:linear-gradient(135deg,var(--accent),var(--accent2))}
+    .tick{display:inline-flex;width:18px;height:18px;border:1px solid rgba(255,255,255,.18);border-radius:6px;align-items:center;justify-content:center}
+    .tick svg{width:14px;height:14px}
+    .cta{display:flex;flex-wrap:wrap;gap:14px}
+    .badge-row{display:flex;gap:10px;flex-wrap:wrap}
+    .pill{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:#cfe3ff}
+    .footer{margin-top:36px;padding:24px;border-top:1px solid rgba(255,255,255,.06);color:#8fa0c9;font-size:14px}
+    .disclaimer{font-size:12px;line-height:1.5;color:#9aa4bf;margin-top:12px}
+    .flag{display:inline-flex;align-items:center;gap:8px}
+    .flag span{opacity:.85}
+    @media (max-width: 980px){
+      .hero{grid-template-columns:1fr}
+    }
+    @media (max-width: 640px){
+      .features{grid-template-columns:1fr}
+      .hero h1{font-size:34px}
+      .logo img{height:40px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo"><img src="logo.png" alt="ICE USDT logo" /> <span>ICE USDT</span></div>
+      <nav style="display:flex;gap:10px;align-items:center">
+        <a class="btn" href="#how" data-i18n="nav.how">How to Register</a>
+        <a class="btn" href="#benefits" data-i18n="nav.benefits">Benefits</a>
+        <a class="btn primary" href="#get-started" data-i18n="nav.getStarted">Get Started</a>
+        <div class="lang-switch">
+          <button class="btn active" data-lang="en" id="langEn">EN</button>
+          <button class="btn" data-lang="ur" id="langUr">اردو</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <span class="badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-7z" stroke="currentColor" stroke-width="1.5"/></svg> <span data-i18n="badge.hub">Pakistan’s Gaming Hub</span></span>
+        <h1 data-i18n-html="hero.title">Play 500+ Games. Deposit in <span style="background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;color:transparent">USDT</span>. Withdraw Fast.</h1>
+        <p class="tagline" data-i18n="hero.tagline">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" opacity=".5"/><path d="M7 12l3 3 7-7" stroke="currentColor" stroke-width="1.6"/></svg>
+          ICE USDT is an international gaming platform serving Pakistan and players worldwide—crypto-first deposits, quick payouts, and 24/7 access.
+        </p>
+        <div class="kpis" style="margin:18px 0 24px">
+          <div class="kpi"><div class="big">500+</div><div data-i18n="kpi.games">Games available</div></div>
+          <div class="kpi"><div class="big">24/7</div><div data-i18n="kpi.live">Live platform</div></div>
+        </div>
+        <div class="cta">
+          <a href="https://iceusdt.com/clk?src=yCtcSrXGvr" class="btn primary" target="_blank" rel="noopener" data-i18n="cta.start">Start Playing</a>
+          <a href="https://wa.me/447516010804" class="btn whatsapp" target="_blank" rel="noopener" data-i18n="cta.whatsapp">Get ID on WhatsApp</a>
+        </div>
+        <div class="badge-row" style="margin-top:16px">
+          <span class="pill flag">
+            <svg width="18" height="12" viewBox="0 0 18 12"><rect width="18" height="12" fill="#01411C"/><path d="M11.5 6a3 3 0 11-1.2-2.4A2.5 2.5 0 0011.5 6z" fill="#fff"/><polygon points="5.5,6 7,6.5 6,5 7,3.5 5.5,4 4,3.5 5,5 4,6.5" fill="#fff"/></svg>
+            <span data-i18n="pill.optimized">Optimized for Pakistan</span>
+          </span>
+          <span class="pill" data-i18n="pill.worldwide">Worldwide Access</span>
+          <span class="pill" data-i18n="pill.multi">Multi-currency Support</span>
+          <span class="pill" data-i18n="pill.usdt">USDT Deposits</span>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <img src="logo.png" alt="ICE USDT logo preview" style="width:100%;max-height:320px;object-fit:contain;border-radius:14px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.02);padding:16px">
+        <div class="glow"></div>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section id="benefits" class="section">
+      <div class="grid features">
+        <div class="card">
+          <h3 style="margin:0 0 8px" data-i18n="benefits.title">Why ICE USDT?</h3>
+          <ul class="list">
+            <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2"/></svg></span>
+              <span data-i18n="benefits.points.fast"><strong>Fast deposits & withdrawals</strong> via USDT—streamlined from wallet to game.</span></li>
+            <li><span class="tick"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2"/></svg></span>
+              <span data-i18n-html="benefits.points.nofees"><strong>No hidden platform fees</strong> on deposits and withdrawals from our side.<br /><small style="color:var(--muted)">Network fees may apply.</small></span></li>
+            <li><span class="tick"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2"/></svg></span>
+              <span data-i18n="benefits.points.crypto"><strong>Crypto-native experience</strong> designed to minimize traditional banking friction.</span></li>
+            <li><span class="tick"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2"/></svg></span>
+              <span data-i18n="benefits.points.games"><strong>500+ games</strong> across multiple genres—casual, cards, strategy, and more.</span></li>
+            <li><span class="tick"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2"/></svg></span>
+              <span data-i18n="benefits.points.intl"><strong>International platform</strong> with global access and multi-currency payments.</span></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 style="margin:0 0 8px" data-i18n="security.title">Security & Reliability</h3>
+          <ul class="list">
+            <li><i></i><span data-i18n="security.p1">Two-factor authentication (2FA) for account protection.</span></li>
+            <li><i></i><span data-i18n="security.p2">Wallet-to-wallet flows help reduce intermediaries.</span></li>
+            <li><i></i><span data-i18n="security.p3">Transparent status tracking for deposits & withdrawals.</span></li>
+            <li><i></i><span data-i18n="security.p4">Support team available for quick assistance.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW TO REGISTER -->
+    <section id="how" class="section">
+      <div class="grid" style="grid-template-columns:1.2fr .8fr">
+        <div class="card">
+          <h3 style="margin:0 0 12px" data-i18n="how.title">How to Register</h3>
+          <div class="grid" style="grid-template-columns:1fr;gap:12px">
+            <div class="step">
+              <div class="num">1</div>
+              <div>
+                <strong data-i18n="how.step1.title">Self-Registration</strong>
+                <p style="margin:6px 0;color:var(--muted)" data-i18n="how.step1.desc">Create your account on our website. Verify your email, enable 2FA, and set a strong password.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="num">2</div>
+              <div>
+                <strong data-i18n="how.step2.title">Get an ID via WhatsApp</strong>
+                <p style="margin:6px 0;color:var(--muted)" data-i18n="how.step2.desc">Prefer help? Message us on WhatsApp and we’ll set up your player ID for you.</p>
+                <a class="btn whatsapp" href="https://wa.me/447516010804" target="_blank" rel="noopener" data-i18n="how.step2.btn">Chat on WhatsApp</a>
+              </div>
+            </div>
+            <div class="step">
+              <div class="num">3</div>
+              <div>
+                <strong data-i18n="how.step3.title">Deposit with USDT</strong>
+                <p style="margin:6px 0;color:var(--muted)" data-i18n="how.step3.desc">Send USDT to your unique deposit address. Funds typically reflect within minutes after network confirmation.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="num">4</div>
+              <div>
+                <strong data-i18n="how.step4.title">Play 500+ Games</strong>
+                <p style="margin:6px 0;color:var(--muted)" data-i18n="how.step4.desc">Jump straight into your favorite titles. Track wins, bonuses, and balances in your dashboard.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="margin:0 0 12px" data-i18n="quick.title">Quick Highlights</h3>
+          <ul class="list">
+            <li><span class="tick"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2"/></svg></span><span data-i18n="quick.p1">USDT deposits—no bank branch required</span></li>
+            <li><span class="tick"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2"/></svg></span><span data-i18n="quick.p2">Fast withdrawals with status tracking</span></li>
+            <li><span class="tick"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2"/></svg></span><span data-i18n="quick.p3">No extra platform charges (network fees may apply)</span></li>
+            <li><span class="tick"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2"/></svg></span><span data-i18n="quick.p4">Global access & multi-currency support</span></li>
+            <li><span class="tick"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2"/></svg></span><span data-i18n="quick.p5">500+ games, new titles added regularly</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="card">
+        <h3 style="margin:0 0 12px" data-i18n="faq.title">FAQ</h3>
+        <div class="grid" style="grid-template-columns:1fr 1fr">
+          <div>
+            <p><strong data-i18n="faq.q1">Is ICE USDT available in Pakistan?</strong><br /><span style="color:var(--muted)" data-i18n="faq.a1">Yes. The platform serves players in Pakistan and many other countries, subject to local laws.</span></p>
+            <p><strong data-i18n="faq.q2">Are there any hidden charges?</strong><br /><span style="color:var(--muted)" data-i18n="faq.a2">We don’t add extra platform fees on deposits/withdrawals. Standard blockchain/network fees may apply.</span></p>
+          </div>
+          <div>
+            <p><strong data-i18n="faq.q3">How fast are withdrawals?</strong><br /><span style="color:var(--muted)" data-i18n="faq.a3">Most withdrawals complete within minutes after approval and network confirmation.</span></p>
+            <p><strong data-i18n="faq.q4">Do I need to consider taxes?</strong><br /><span style="color:var(--muted)" data-i18n="faq.a4">Tax rules vary by country. Please consult a qualified advisor regarding your obligations.</span></p>
+          </div>
+        </div>
+        <p class="disclaimer" data-i18n="faq.disclaimer">
+          <strong>Important:</strong> Use of the platform is subject to your local regulations. By using ICE USDT, you agree to follow all applicable laws. We do not guarantee outcomes, risk elimination, or regulatory determinations in any jurisdiction.
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="get-started" class="section">
+      <div class="card" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+        <div>
+          <h3 style="margin:0 0 6px" data-i18n="cta.readyTitle">Ready to Play?</h3>
+          <p style="margin:0;color:var(--muted)" data-i18n="cta.readyDesc">Create your account in minutes or message us for a WhatsApp-assisted setup.</p>
+        </div>
+        <div class="cta">
+          <a href="https://iceusdt.com/clk?src=yCtcSrXGvr" class="btn primary" target="_blank" rel="noopener" data-i18n="cta.create">Create Account</a>
+          <a href="https://wa.me/+447516010804" class="btn whatsapp" target="_blank" rel="noopener" data-i18n="cta.whatsapp">Get ID on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px">
+        <div>© <span id="year"></span> ICE USDT. <span data-i18n="footer.allRights">All rights reserved.</span></div>
+        <div style="display:flex;gap:14px">
+          <a href="#" data-i18n="footer.terms">Terms</a>
+          <a href="#" data-i18n="footer.privacy">Privacy</a>
+          <a href="#" data-i18n="footer.support">Support</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    // simple year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
